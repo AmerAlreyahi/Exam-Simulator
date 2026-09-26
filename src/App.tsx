@@ -112,7 +112,7 @@ function LoadingScreen() {
       <div className="auth-page">
         <div className="auth-card">
           <div className="auth-mark brand">
-            <Icon name="logo" size={30} strokeWidth={2} />
+            <img src="/ExamPro.png" alt="ExamPro logo" draggable={false} />
           </div>
           <div className="auth-spinner" />
           <p className="auth-sub" style={{ marginBottom: 0 }}>Loading…</p>
@@ -254,7 +254,7 @@ function AppContent() {
         return (
           <Exam
             mixed={pendingMixed.spec}
-            onFinish={() => {}}
+            onFinish={() => { }}
             onExit={() => { setPendingMixed(null); navigate(returnView); }}
           />
         );

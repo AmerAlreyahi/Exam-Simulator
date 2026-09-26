@@ -40,8 +40,8 @@ export function Sidebar({
   return (
     <aside className={`sidebar${isOpen ? ' open' : ''}`} id="sidebar">
       <div className="brand">
-        <button className="brand-badge" id="brand-btn" onClick={onBrandClick} aria-label="Open settings">
-          <Icon name="logo" size={20} strokeWidth={2} />
+        <button className="brand-badge has-img" id="brand-btn" onClick={onBrandClick} aria-label="Open settings">
+          <img className="brand-img" src="/ExamPro.png" alt="ExamPro logo" draggable={false} />
         </button>
         <div style={{ minWidth: 0 }}>
           <div className="brand-name">ExamPro</div>

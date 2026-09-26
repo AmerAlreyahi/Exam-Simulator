@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/images/logo.svg" width="88" height="88" alt="ExamPro logo">
+<img src="public/ExamPro.png" width="88" height="88" alt="ExamPro logo">
 
 # ExamPro
 
@@ -54,7 +54,7 @@ learn it:
    you know get pushed weeks out.
 3. **Exam** — a timed, scored simulation with a countdown, question pools
    ("weak spots", "due for review", "never seen"), and a results page that
-   tells you not just your score but *where the clock went*.
+   tells you not just your score but _where the clock went_.
 
 It's a React + Vite single-page app backed by Supabase (Postgres + Auth):
 sign in, and your banks, scores and review schedule sync to your account and
@@ -87,7 +87,7 @@ follow you across devices.
 - Score trend, study-activity heatmap, review forecast
 - Accuracy by question type
 - Weak-spot list with one-click drill sessions
-- Pace analysis on every result — slow *and* wrong vs. fast *and* wrong
+- Pace analysis on every result — slow _and_ wrong vs. fast _and_ wrong
 
 **Everything else**
 
@@ -156,33 +156,37 @@ exactly what didn't parse and why.
 
 ```md
 ### 1. Which learning technique uses increasing intervals between reviews to boost retention?
+
 - [ ] Massed practice
 - [ ] Spaced repetition
 - [ ] Cramming
 - [ ] Random review
 
 ### 2. Select all that apply: which are primary colors?
+
 - [ ] Red
 - [ ] Green
 - [ ] Blue
 - [ ] Purple
 
 ### 3. Matching: pair each term with its definition.
+
 - [ ] Alpha
 - [ ] Beta
-Definition A: first letter
-Definition B: second letter
+      Definition A: first letter
+      Definition B: second letter
 
 ### Answer Key
-| Question Number | Correct Answer |
-| :-- | :-- |
-| 1 | Spaced repetition |
-| 2 | • Red <br>• Blue |
-| 3 | Alpha, Beta |
+
+| Question Number | Correct Answer    |
+| :-------------- | :---------------- |
+| 1               | Spaced repetition |
+| 2               | • Red <br>• Blue  |
+| 3               | Alpha, Beta       |
 ```
 
 Supported out of the box: single choice, multi-select, true/false, matching,
-letter-keyed answers (`B`, `c)`), answer keys as a table *or* a list, images
+letter-keyed answers (`B`, `c)`), answer keys as a table _or_ a list, images
 (`![alt](path)`), audio (`[audio: file.mp3]`) and video (`[video: file.mp4]`).
 Numbering can restart across sections of the same document — everything gets
 renumbered on import.
@@ -212,7 +216,7 @@ exact rules (heading format, option style, matching layout, answer key
 table) so what comes back imports cleanly on the first try.
 
 **JSON** works too — either a bare array of questions or the
-`{ "name", "questions": [...] }` shape produced by *Export as JSON*. Paste
+`{ "name", "questions": [...] }` shape produced by _Export as JSON_. Paste
 your own hand-written JSON and the importer fills in anything you omit.
 
 For the complete, working reference — every question type, every answer-key
@@ -328,7 +332,7 @@ checked, auth/redirect flow traced) — no exploitable issue was found.
 
 ## Deploying your own copy
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/AmerZuher/Exam-Simulator&env=VITE_SUPABASE_URL,VITE_SUPABASE_ANON_KEY,VITE_GOOGLE_CLIENT_ID&envDescription=Supabase%20project%20URL%2Fanon%20key%20(required)%20and%20Google%20OAuth%20client%20ID%20(optional)&envLink=https://github.com/AmerZuher/Exam-Simulator/blob/master/docs/SETUP.md&project-name=exampro&repository-name=exampro)
+[![Deploy with Vercel](https://vercel.com/button)](<https://vercel.com/new/clone?repository-url=https://github.com/AmerZuher/Exam-Simulator&env=VITE_SUPABASE_URL,VITE_SUPABASE_ANON_KEY,VITE_GOOGLE_CLIENT_ID&envDescription=Supabase%20project%20URL%2Fanon%20key%20(required)%20and%20Google%20OAuth%20client%20ID%20(optional)&envLink=https://github.com/AmerZuher/Exam-Simulator/blob/master/docs/SETUP.md&project-name=exampro&repository-name=exampro>)
 
 1. Set up a Supabase project and run
    [`migrations/000_fresh_install.sql`](migrations/000_fresh_install.sql)

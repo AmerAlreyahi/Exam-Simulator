@@ -61,7 +61,7 @@ export function Login() {
           {mode === 'welcome' && (
             <>
               <div className="auth-mark brand">
-                <Icon name="logo" size={30} strokeWidth={2} />
+                <img src="/ExamPro.png" alt="ExamPro logo" draggable={false} />
               </div>
               <h1 className="auth-title">Welcome to ExamPro</h1>
               <p className="auth-sub">
@@ -114,7 +114,7 @@ export function Login() {
               </button>
 
               <div className="auth-mark brand">
-                <Icon name="logo" size={30} strokeWidth={2} />
+                <img src="/ExamPro.png" alt="ExamPro logo" draggable={false} />
               </div>
               <h1 className="auth-title">
                 {mode === 'email-signup' ? 'Create your account' : 'Sign in'}
