@@ -26,7 +26,6 @@ import { Login } from './components/views/Login';
 import { useAuth } from './hooks/useAuth';
 import { useExams } from './hooks/useExams';
 import { useGroups } from './hooks/useGroups';
-import { Icon } from './utils/icons';
 import { slugify } from './utils/slug';
 
 type ViewState =
