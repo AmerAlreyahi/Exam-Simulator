@@ -15,11 +15,7 @@
 
 <img src="gallery/poster.webp" alt="ExamPro Marketing Poster" width="100%">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/images/dashboard-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="docs/images/dashboard-light.png">
-  <img src="docs/images/dashboard-light.png" alt="ExamPro Dashboard">
-</picture>
+
 
 </div>
 
@@ -62,6 +58,11 @@ learn it:
 It's a React + Vite single-page app backed by Supabase (Postgres + Auth):
 sign in, and your banks, scores and review schedule sync to your account and
 follow you across devices.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/dashboard-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="docs/images/dashboard-light.png">
+  <img src="docs/images/dashboard-light.png" alt="ExamPro Dashboard">
+</picture>
 
 👉 **[Try it now — no install needed](https://exam-simulator-amer-zuhers-projects.vercel.app)**,
 or run your own copy against your own Supabase project (see below).
