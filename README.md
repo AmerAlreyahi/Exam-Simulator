@@ -13,11 +13,11 @@
 
 **[🚀 Try the live demo](https://exam-simulator-amer-zuhers-projects.vercel.app)**
 
-<img width="1376" height="768" alt="ExamPRO_coverIMG" src="https://github.com/user-attachments/assets/4992243b-3df6-4cb4-ab4b-2ec26abd63ef" /></picture>
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/images/dashboard-dark.png">
   <source media="(prefers-color-scheme: light)" srcset="docs/images/dashboard-light.png">
+  <img src="docs/images/dashboard-light.png" alt="ExamPro Dashboard">
+</picture>
 
 </div>
 
