@@ -28,6 +28,7 @@
 - [What this is](#what-this-is)
 - [Features](#features)
 - [Screenshots](#screenshots)
+- [Gallery](#gallery)
 - [Quick start](#quick-start)
 - [Bring your own question bank](#bring-your-own-question-bank)
   - [Generate one with AI](#dont-have-a-question-bank-generate-one-with-ai)
@@ -123,6 +124,12 @@ or run your own copy against your own Supabase project (see below).
 <br>
 <img src="docs/images/settings.png" alt="Settings page">
 </details>
+
+## Gallery
+
+<div align="center">
+<img src="gallery/poster.webp" alt="ExamPro Marketing Poster" width="100%">
+</div>
 
 ## Quick start
 
