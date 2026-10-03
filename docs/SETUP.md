@@ -60,6 +60,11 @@ For Google OAuth:
 2. Authorized redirect URI: `https://your-project.supabase.co/auth/v1/callback`
 3. Supabase → **Auth → Providers → Google** → paste the Client ID and Secret
 4. Set `VITE_GOOGLE_CLIENT_ID` in `.env`
+5. Add your site origin (e.g. `https://exampro.example.com`, and `http://localhost:5173`
+   for dev) to **Authorized JavaScript origins** on the same OAuth client. The
+   default sign-in uses Google's popup button so the account chooser shows your
+   site, not `*.supabase.co`. Set `VITE_GOOGLE_SIGNIN_MODE=redirect` to use the
+   Supabase redirect flow instead.
 
 ## 6. Run it
 

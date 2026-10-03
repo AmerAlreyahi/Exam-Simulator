@@ -9,6 +9,7 @@ interface AuthContextType {
   signUp: (email: string, password: string) => Promise<void>;
   signOut: () => Promise<void>;
   signInWithGoogle: () => Promise<void>;
+  signInWithGoogleToken: (token: string, nonce: string) => Promise<void>;
 }
 
 export const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -75,6 +76,11 @@ export function AuthProvider({ children }: AuthProviderProps) {
     if (error) throw error;
   };
 
+  const signInWithGoogleToken = async (token: string, nonce: string) => {
+    const { error } = await supabase.auth.signInWithIdToken({ provider: 'google', token, nonce });
+    if (error) throw error;
+  };
+
   return (
     <AuthContext.Provider
       value={{
@@ -84,6 +90,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
         signUp,
         signOut,
         signInWithGoogle,
+        signInWithGoogleToken,
       }}
     >
       {children}

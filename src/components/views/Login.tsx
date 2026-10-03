@@ -1,6 +1,11 @@
 import { useState } from 'react';
 import { useAuth } from '../../hooks/useAuth';
 import { Icon } from '../../utils/icons';
+import { GoogleSignInButton } from '../ui/GoogleSignInButton';
+
+// Set VITE_GOOGLE_SIGNIN_MODE=redirect in .env to use Supabase's redirect flow instead.
+const GOOGLE_CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID;
+const USE_GIS = !!GOOGLE_CLIENT_ID && import.meta.env.VITE_GOOGLE_SIGNIN_MODE !== 'redirect';
 
 const GOOGLE_G = (
   <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true">
@@ -69,19 +74,23 @@ export function Login() {
                 history to your account.
               </p>
 
-              <button
-                type="button"
-                className="google-btn"
-                onClick={handleGoogle}
-                disabled={googleLoading}
-              >
-                {GOOGLE_G}
-                <span className="gbtn-text">
-                  <span className="gbtn-line1">
-                    {googleLoading ? 'Redirecting…' : 'Continue with Google'}
+              {USE_GIS ? (
+                <GoogleSignInButton clientId={GOOGLE_CLIENT_ID} onError={setError} />
+              ) : (
+                <button
+                  type="button"
+                  className="google-btn"
+                  onClick={handleGoogle}
+                  disabled={googleLoading}
+                >
+                  {GOOGLE_G}
+                  <span className="gbtn-text">
+                    <span className="gbtn-line1">
+                      {googleLoading ? 'Redirecting…' : 'Continue with Google'}
+                    </span>
                   </span>
-                </span>
-              </button>
+                </button>
+              )}
 
               <div className="auth-divider">or</div>
 
